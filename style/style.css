@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    font-family: 'Playfair Display', serif;
+}
+nav{
+    width: 100%;
+    height: 80px;
+    background: #7F8688;
+}
+.brandLogo{
+    text-transform: uppercase;
+    line-height: 80px;
+    padding: 0 100px;
+    color:#F3E367;
+    font-style: oblique;
+
+}
+nav ul{
+float: right;
+margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 4px;
+}
+nav ul li a{
+    font-size: 17px;
+    padding: 7px 13px;
+    color: whitesmoke;
+}
+a.active, a:hover{
+    color:#929D9E;
+    border: 2px solid #F3E367 ;
+    border-radius: 50%;
+    background: #F3E367;
+}
+#check{
+    display: none;
+}
+.checkBtn {
+    display: none;
+    float: right;
+    margin-right: 25px;
+    line-height: 80px;
+    font-size: 25px;
+    color:#A7BC5B ;
+    cursor: pointer;
+}
+@media(max-width:627px){
+    .checkBtn {
+    display:block;
+
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        top:80px;
+        
+    }
+    nav ul li{
+        display: block;
+        margin: 80px 0;
+        line-height:30px ;
+        text-align: center;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+#check:checked~ul{
+    left: 0;
+}
+
+}
